@@ -31,7 +31,9 @@ extern class Window {
 	public function showDevTools( ?id : String, ?headless : Bool ) : Void;
 	public function closeDevTools() : Void;
 	public function enterKioskMode() : Void;
-	public function leaveKioskMode(): Void;
+	public function leaveKioskMode(): Void;	
+	public function capturePage(callback:String->Void):Void;
+	public function isDevToolsOpen():Bool;
 	
 	@:overload(function( event : String, callb : Dynamic -> Dynamic ) : Void {})
 	@:overload(function( event : String, callb : Void -> Dynamic ) : Void {})
