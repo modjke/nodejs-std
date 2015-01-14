@@ -27,7 +27,7 @@ extern class Window {
 	public function minimize() : Void;
 	public function restore() : Void;
 	public function enterFullscreen() : Void;
-	public function leavFullscreen() : Void;
+	public function leaveFullscreen() : Void;
 	public function showDevTools( ?id : String, ?headless : Bool ) : Void;
 	public function closeDevTools() : Void;
 	public function enterKioskMode() : Void;
