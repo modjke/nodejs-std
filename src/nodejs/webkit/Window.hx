@@ -38,10 +38,40 @@ extern class Window {
 	@:overload(function( event : String, callb : Dynamic -> Void ) : Void {})
 	public function on( event : String, callb : Void -> Void ) : Void;
 	
+	@:overload(function( event : String, callb : Dynamic -> Dynamic ) : Void {})
+	@:overload(function( event : String, callb : Void -> Dynamic ) : Void {})
+	@:overload(function( event : String, callb : Dynamic -> Void ) : Void {})
+	public function once( event : String, callb : Void -> Void ) : Void;
+	
 	public static function get() : Window;
 	public static function open( url : String, ?options : { } ) : Window;
 	
 	static function __init__() : Void untyped {
 		Window = UI.Window;
 	}
+}
+
+class WindowC
+{
+	public static inline var EVENT_ENTER_FULLSCREEN = "enter-fullscreen";
+	public static inline var EVENT_LEAVE_FULLSCREEN = "leave-fullscreen";
+	public static inline var EVENT_CLOSE = "close";
+	public static inline var EVENT_CLOSED = "closed";
+	public static inline var EVENT_LOADING = "loading";
+	public static inline var EVENT_LOADED = "loaded";
+	public static inline var EVENT_DOCUMENT_START = "document-start";
+	public static inline var EVENT_DOCUMENT_END = "document-end";
+	public static inline var EVENT_FOCUS = "focus";
+	public static inline var EVENT_BLUR = "blur";
+	public static inline var EVENT_MINIMIZE = "minimize";
+	public static inline var EVENT_RESTORE = "restore";
+	public static inline var EVENT_MAXIMIZE = "maximize";
+	public static inline var EVENT_UNMAXIMIZE = "unmaximize";
+	public static inline var EVENT_MOVE = "move";
+	public static inline var EVENT_RESIZE = "resize";
+	public static inline var EVENT_ZOOM = "zoom";
+	public static inline var EVENT_CAPTUREPAGEDONE = "capturepagedone";
+	public static inline var EVENT_DEVTOOLS_OPENED = "devtools-opened";
+	public static inline var EVENT_NEW_WIN_POLICY = "new-win-policy";
+	
 }
