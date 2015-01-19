@@ -177,9 +177,9 @@ typedef ReadStreamOpt = {
 }
 
 typedef WriteStreamOpt = {
-	var flags:String;
-	var encoding:String;
-	var mode:Int;
+	@:optional var flags:String;
+	@:optional var encoding:String;
+	@:optional var mode:Int;
 }
 
 /*
@@ -203,7 +203,8 @@ typedef NodeReadStream = { > NodeEventEmitter,
 typedef NodeWriteStream = { > NodeEventEmitter,
 	var writeable:Bool;
 	@:overload(function(chunk:NodeBuffer):Bool {})
-	function write(d:String,?enc:String,?fd:Int):Bool;
+	function write(d:String, ?enc:String, ?fd:Int):Bool;
+	@:overload(function():Void {})
 	@:overload(function(b:NodeBuffer):Void {})
 	function end(?s:String,?enc:String):Void;
 	function destroy():Void;
