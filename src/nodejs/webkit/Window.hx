@@ -45,6 +45,11 @@ extern class Window {
 	@:overload(function( event : String, callb : Dynamic -> Void ) : Void {})
 	public function once( event : String, callb : Void -> Void ) : Void;
 	
+	@:overload(function( event : String, callb : Dynamic -> Dynamic ) : Void {})
+	@:overload(function( event : String, callb : Void -> Dynamic ) : Void {})
+	@:overload(function( event : String, callb : Dynamic -> Void ) : Void {})
+	public function removeListener(event:String, callb:Void->Void):Void;
+	
 	public static function get() : Window;
 	public static function open( url : String, ?options : { } ) : Window;
 	
