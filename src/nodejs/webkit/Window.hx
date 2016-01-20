@@ -1,6 +1,6 @@
 package nodejs.webkit;
 
-@:native("UI.Window")
+@:jsRequire("nw.gui", "Window")
 extern class Window {
 	public var window : js.html.DOMWindow;
 	public var x : Int;

@@ -1,5 +1,6 @@
 package nodejs.webkit;
 
+@:jsRequire("nw.gui", "Clipboard")
 extern class Clipboard {
 	
 	public static inline function getInstance() : Clipboard {
@@ -10,8 +11,5 @@ extern class Clipboard {
 	public function set( data : Dynamic, ?type : String ) : Void;
 	public function clear() : Void;
 
-	static function __init__() : Void untyped {
-		Clipboard = UI.Clipboard;
-	}
 	
 }

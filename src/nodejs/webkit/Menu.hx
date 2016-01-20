@@ -1,6 +1,6 @@
 package nodejs.webkit;
 
-@:native("UI.Menu")
+@:jsRequire("nw.gui", "Menu")
 extern class Menu {
 
 	var items(default, null) : Array<MenuItem>;
