@@ -1,5 +1,6 @@
 package nodejs.webkit;
 
+@:native("UI.Window")
 extern class Window {
 	public var window : js.html.DOMWindow;
 	public var x : Int;
@@ -53,9 +54,6 @@ extern class Window {
 	public static function get() : Window;
 	public static function open( url : String, ?options : { } ) : Window;
 	
-	static function __init__() : Void untyped {
-		Window = UI.Window;
-	}
 }
 
 class WindowC

@@ -1,5 +1,6 @@
 package nodejs.webkit;
 
+@:native("UI.Menu")
 extern class Menu {
 
 	var items(default, null) : Array<MenuItem>;
@@ -15,8 +16,5 @@ extern class Menu {
 		return new Menu( { type : "menubar" } );
 	}
 	
-	static function __init__() : Void untyped {
-		Menu = UI.Menu;
-	}
-	
+
 }
